@@ -1,5 +1,5 @@
 # einit 
-if a process write in go run in container as 1 pid(process A). If other process (process B) exited sometimes process 1 will be chosed to be it's ppid. If this B process is Zombie, process A will not reap Zombie process
+if a process write in go run in container as 1 pid(process A). If other process (process B) is exited sometime process 1 will be chosed to be it's ppid. If this B process is Zombie, process A will not reap Zombie process
 for example  k8s yaml
 ```
 apiVersion: apps/v1
