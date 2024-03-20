@@ -69,7 +69,7 @@ root      531225  0.0  0.0   1612     4 ?        S    18:39   0:00      \_ sleep
 root      531242  0.0  0.0   1612     4 ?        S    18:39   0:00      \_ sleep 201
 ```
 
-kill -9 531242 (531242 will not be reped by main)
+kill -9 531242 (531242 will not be reaped by main)
 
 ```
 root      531129  0.0  0.1 722524 13544 ?        Sl   18:39   0:00 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id bdd8d75f2b7ffe2b48d9df6a55068527e0d270ff760b317318831d
@@ -79,7 +79,7 @@ root      531225  0.0  0.0   1612     4 ?        S    18:39   0:00      \_ sleep
 root      531242  0.0  0.0      0     0 ?        Z    18:39   0:00      \_ [sleep] <defunct>
 
 ```
-kill -9 531225 (531225 will be reped by main)
+kill -9 531225 (531225 will be reaped by main)
 ```
 root      531129  0.0  0.1 722524 14808 ?        Sl   18:39   0:00 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id bdd8d75f2b7ffe2b48d9df6a55068527e0d270ff760b317318831d
 65535     531151  0.0  0.0    996     4 ?        Ss   18:39   0:00  \_ /pause
