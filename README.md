@@ -41,20 +41,14 @@ import (
 
 func main() {
 	cmd := exec.Command("sleep", "10000")
-
-	// 启动命令
 	err := cmd.Start()
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 
-	err = cmd.Wait()
-	if err != nil {
-		fmt.Println(err)
-	}
-	time.Sleep(time.Second * 10000)
-
+	go cmd.Wait()
+	time.Sleep(time.Second * 36000)
 }
 ```
 kill -9 `pidof sleep`
