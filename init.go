@@ -14,13 +14,13 @@ func reapZombies() error {
 	//}
 	wstatus := syscall.WaitStatus(0)
 	for {
-		currentChildPid, err := syscall.Wait4(-1, &wstatus, syscall.WNOHANG, nil)
+		childPid, err := syscall.Wait4(-1, &wstatus, syscall.WNOHANG, nil)
 		if err != nil {
 			return err
 		}
-		if currentChildPid > 0 {
-			fmt.Printf("pid is %d \n", currentChildPid)
-		} else if currentChildPid == 0 {
+		if childPid > 0 {
+			fmt.Printf("pid is %d \n", childPid)
+		} else if childPid == 0 {
 			return nil
 		}
 	}
