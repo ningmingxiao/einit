@@ -20,7 +20,6 @@ func reapZombies() error {
 		}
 		if currentChildPid > 0 {
 			fmt.Printf("pid is %d \n", currentChildPid)
-			continue
 		} else if currentChildPid == 0 {
 			return nil
 		}
