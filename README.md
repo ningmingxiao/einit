@@ -59,7 +59,7 @@ func main() {
 ```
 kill -9 `pidof sleep`
 sleep 201 will become Zombie.
-If set shareProcessNamespace: true pause will   reap Zombie process,but sometimes is not safe enough.
+If set shareProcessNamespace: true pause will   reap Zombie process,but sometimes it is not safe enough.
 
 ```
 root      531129  3.0  0.1 722524 13908 ?        Sl   18:39   0:00 /usr/bin/containerd-shim-runc-v2 -namespace k8s.io -id bdd8d75f2b7ffe2b48d9df6a55068527e0d270ff760b317318831d
